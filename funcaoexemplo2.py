@@ -1,18 +1,21 @@
-def inverte_numero(numero):
-    # Converte o número em uma lista de dígitos
-    lista_digitos = list(str(numero))
-    
-    # Inverte a lista de dígitos usando o método reverse()
-    lista_digitos.reverse()
-    
-    # Converte a lista invertida de dígitos de volta para um número
-    numero_invertido = int("".join(lista_digitos))
-    
-    return numero_invertido
+from random import randint
 
-# Solicita ao usuário um número inteiro
-numero = int(input("Digite um número inteiro: "))
+def sorteia():
+    numeros = []
+    for i in range(5):
+        numeros.append(randint(0, 99))
+    print(f'\nSorteando {len(numeros)} valores da lista')
 
-# Chama a função e exibe o número invertido
-numero_invertido = inverte_numero(numero)
-print("Número invertido:", numero_invertido)
+    for i in numeros:
+        print(f'{i}', end=' ')
+        return numeros
+    
+def soma_par(lista_numeros):
+    pares = []
+    for i in lista_numeros:
+            if i%2==0:
+                pares.append(i)
+    print(f'\nOs valores pares da lista sâo {pares}')
+    print(f'E a soma deles é: {sum(pares)}\n')
+
+soma_par(sorteia())
