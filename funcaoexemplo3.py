@@ -10,7 +10,7 @@ def divisao (n1, n2):
     else:
         return n2/n1
     
-continuar = input('Deseja realizar uma operação? [S] ou [N] : ').upper
+continuar = input('Deseja realizar uma operação? [S] ou [N] : ').upper()
     
 while continuar == "S":
 
@@ -28,7 +28,7 @@ while continuar == "S":
     else:
         print(divisao(num1, num2))  
 
-    continuar = input('Deseja realizar uma operação? [S] ou [N] : ').upper
+    continuar = input('Deseja realizar uma operação? [S] ou [N] : ').upper()
 
 
     
